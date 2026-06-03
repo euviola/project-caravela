@@ -10,7 +10,7 @@ class EventBus:
 
     def emit(self, event, data=None):
         if event not in self.listeners:
-            return
+            return None
         
         for callback in self.listeners[event]:
             callback(data)
