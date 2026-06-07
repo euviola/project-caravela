@@ -7,13 +7,14 @@ class CommandParser:
         self.command_values = [value for value in self.commands.values()]
 
 
-    def ParseCommand(self, command:str):
+    def SplitCommand(self, command:str):
         command_split = command.split()
+        
+        return command_split
+        
+    def ReturnFirstArgument(self, command_split):
         first_word = command_split[0]
 
         for key in self.command_keys:
             if first_word == key:
                 return key, self.commands[key]
-    
-    def ReturnAction(self, command_split:list):
-        pass
