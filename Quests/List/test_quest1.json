@@ -19,20 +19,12 @@
             }
         },
         {
-            "id":"test_quest_st03a",
+            "id":"test_quest_st03",
             "description":"Kill the bandit",
             "completion_condition": {
                 "event":"on_npc_killed",
                 "npc_id":"sole_bandit"
             }
-        },
-        {
-            "id": "test_quest_st03b",
-            "description":"Bribe the bandit",
-            "completion_condition": {
-                "event":"on_npc_bribed",
-                "npc_id":"sole_bandit"
-            }  
         },
         {
             "id":"test_quest_final",
@@ -41,6 +33,11 @@
                 "event":"on_npc_talked",
                 "npc_id":"friend"
             }
+        }
+    ],
+    "conclusions": [
+        {
+            "id":"tq_conclusion_kill"
         }
     ]
 }
