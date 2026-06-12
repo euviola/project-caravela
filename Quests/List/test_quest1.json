@@ -1,0 +1,46 @@
+{
+    "id":"test_quest_1",
+    "title":"kill a bandit",
+    "stages": [
+        {
+            "id":"test_quest_st01",
+            "description":"Talk to a friend",
+            "completion_condition": {
+                "event":"on_npc_talked",
+                "npc_id":"friend"
+            }
+        },
+        {
+            "id":"test_quest_st02",
+            "description":"Go to bandit's sole camp",
+            "completion_condition": {
+                "event":"on_location_changed",
+                "location_id":"bandit_sole_camp"
+            }
+        },
+        {
+            "id":"test_quest_st03a",
+            "description":"Kill the bandit",
+            "completion_condition": {
+                "event":"on_npc_killed",
+                "npc_id":"sole_bandit"
+            }
+        },
+        {
+            "id": "test_quest_st03b",
+            "description":"Bribe the bandit",
+            "completion_condition": {
+                "event":"on_npc_bribed",
+                "npc_id":"sole_bandit"
+            }  
+        },
+        {
+            "id":"test_quest_final",
+            "description":"Tell the friend about your endeavour",
+            "completion_condition": {
+                "event":"on_npc_talked",
+                "npc_id":"friend"
+            }
+        }
+    ]
+}

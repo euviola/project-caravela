@@ -1,9 +1,11 @@
 class Quest:
-    def __init__(self, id, title, stage):
-        self.id = id
-        self.title = title
-        self.stage = stage
-        self.status = "Inactive"
+    def __init__(self, data):
+        self.id = data["id"]
+        self.title = data["title"]
+        self.stages = data["stages"]
+        self.current_stage = self.stages["start"]
+        self.completion_conditions = data["completion_conditions"]
+        self.status = data["status"]
 
     def start(self):
         self.status = "Active"
