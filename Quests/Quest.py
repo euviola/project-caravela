@@ -4,7 +4,6 @@ class Quest:
         self.title = data["title"]
         self.stages = data["stages"]
         self.current_stage_index = 0
-        self.completion_conditions = data["completion_condition"]
         self.status = data["status"]
 
     @property
