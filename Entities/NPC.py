@@ -1,4 +1,4 @@
-from Character import Character
+from Entities.Character import Character
 
 class NPC(Character):
     def __init__(self, id, name, health):

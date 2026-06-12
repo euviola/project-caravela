@@ -1,4 +1,4 @@
-from Entity import Entity
+from Entities.Entity import Entity
 
 class Character(Entity):
     def __init__(self, id, name, health:int, is_alive:bool=True):
