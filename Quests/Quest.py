@@ -23,15 +23,9 @@ class Quest:
         print(f"Новий квест: {self.title}")
         print(f"{self.objective}")
 
-    def check(self, event, data):
-        if self.status != "active":
-            return
-        
+    def check(self, data):
         condition = self.current_stage["completion_condition"]
 
-        if event != condition["event"]:
-            return
-        
         for key, value in condition.items():
             if key == "event":
                 continue
